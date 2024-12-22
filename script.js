@@ -30,7 +30,7 @@ const diceResultElement = document.getElementById("diceResult");
 
 // ----------------- Variables globales -----------------
 let engine = null;       // Instance du moteur WebLLM
-let maxRounds = 7;       // Nombre maximum de tours défini par l'utilisateur
+let maxRounds = 3;       // Nombre maximum de tours défini par l'utilisateur
 let currentRound = 0;    // Compteur de tours actuel
 
 // État de l'histoire
@@ -58,7 +58,7 @@ startBtn.addEventListener('click', async () => {
 
   // Récupère le modèle sélectionné et initialise les paramètres
   const selectedModel = modelSelect.value;
-  maxRounds = parseInt(maxRoundsInput.value, 10) || 7;
+  maxRounds = parseInt(maxRoundsInput.value, 10) || 3;
 
   // Initialisation de l'état de l'histoire
   storyState.initialContext = ctx;
