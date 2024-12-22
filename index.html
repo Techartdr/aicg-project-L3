@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RPG IA</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <h1>JDR with AI</h1>
+
+  <!-- Section : Contexte initial -->
+  <section class="initial-section">
+    <h3>Prompt (Histoire et Objectif)</h3>
+    <label for="prompt"></label>
+    <textarea id="prompt" class="prompt-area" rows="4" placeholder="Ex: Je suis un guerrier à la recherche d'un trésor enfoui dans un sombre labyrinthe..."></textarea>
+    <button id="startBtn" class="btn btn-primary">Lancer l'aventure</button>
+  </section>
+
+  <!-- Section : Zone de jeu -->
+  <section class="game-section" hidden>
+    <div id="story-container" class="story-container"></div>
+    <div id="choices" class="choices"></div>
+  </section>
+
+  <!-- Section : Barre latérale -->
+  <aside class="sidebar">
+    <h3>Historique Complet</h3>
+    <textarea id="fullHistory" readonly></textarea>
+    <button id="saveHistoryBtn" class="btn btn-secondary">Télécharger (.txt)</button>
+  </aside>
+
+  <!-- Section : Configuration -->
+  <section class="config-section">
+    <h3>Configuration</h3>
+    <label for="modelSelect" class="label-inline">Modèle</label>
+    <br>
+    <select id="modelSelect">
+      <option value="Llama-3.1-8B-Instruct-q4f32_1-MLC" selected>Llama 3.1 8B (Recommandé)</option>
+      <option value="Llama-2-7b-q4f32_1-MLC">Llama 2 7B</option>
+      <option value="Mistral-7B-v0.3-Q4">Mistral 7B (test)</option>
+    </select>
+    <br>
+    <label for="maxRoundsInput" class="label-inline">Nombre de tours</label>
+    <br>
+    <input type="number" id="maxRoundsInput" value="7" min="1" max="25">
+    <br>
+    <h3>Informations</h3>
+    <div class="info-game">
+      <p class="turns-remaining">Tours restants : <span id="turnsLeft">・</span></p>
+
+      <!-- Barre de vie et bouton de lancer de dé -->
+      <div class="player-stats">
+        <p>Barre de vie : <span id="playerHealth">100%</span></p>
+        <div class="health-bar">
+          <div id="healthFill" class="health-fill" style="width: 100%;"></div>
+        </div>
+        <button id="rollDiceBtn" class="btn btn-secondary">Lancer un dé</button>
+        <span id="diceResult"></span>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script type="module" src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,248 @@
+/* ---------- Thème sombre global ---------- */
+/* Définit les styles de base pour le fond, la police et les couleurs */
+body {
+    font-family: "Roboto", Arial, sans-serif;
+    margin: 0;
+    background: #121212;
+    color: #e0e0e0;
+}
+
+/* ---------- Mise en page principale ---------- */
+/* Conteneur central avec grille responsive */
+.container {
+    max-width: 1100px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: 1fr; /* Une seule colonne par défaut */
+    gap: 20px;
+}
+
+@media (min-width: 768px) {
+    .container {
+        grid-template-columns: 2fr 1fr; /* Deux colonnes pour les écrans larges */
+    }
+}
+
+/* ---------- En-tête ---------- */
+/* Style principal pour les titres */
+h1 {
+    grid-column: 1 / -1; /* Étend sur toute la largeur */
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+/* ---------- Section principale ---------- */
+/* Bloc principal en haut de la page */
+.initial-section {
+    grid-column: 1 / -1; /* Occupe toute la largeur */
+    background: #1e1e1e;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+
+.prompt-area{
+    width: 90%;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .initial-section {
+        grid-column: 1 / -1; /* Toujours pleine largeur sur mobiles */
+    }
+}
+
+/* ---------- Zones secondaires ---------- */
+/* Section de configuration */
+.config-section {
+    background: #1e1e1e;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+
+#modelSelect, #maxRoundsInput {
+    padding: 5px;
+    width: 270px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+/* Section principale de jeu */
+.game-section {
+    grid-column: 1 / -1; /* Étend sur toute la largeur */
+    background: #1e1e1e;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+
+/* ---------- Zone de jeu ---------- */
+/* Conteneur pour l'histoire affichée */
+.story-container {
+    background: #252525;
+    border-radius: 8px;
+    min-height: 200px;
+    padding: 15px;
+    margin-bottom: 15px;
+    overflow: auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+
+/* Bloc individuel d'histoire */
+.story-block {
+    margin-bottom: 15px;
+    padding: 12px;
+    background: #1f1f1f;
+    border-left: 4px solid #4caf50;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* ---------- Tours restants ---------- */
+/* Indicateur de tours restants */
+.turns-remaining {
+    font-weight: 500;
+    margin: 0;
+    color: #cccccc;
+}
+
+/* ---------- Barre latérale ---------- */
+/* Section pour afficher l'historique */
+.sidebar {
+    background: #1e1e1e;
+    border-radius: 8px;
+    padding: 20px;
+    height: fit-content;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+
+.sidebar h2 {
+    margin-top: 0;
+    color: #e0e0e0;
+}
+
+#fullHistory {
+    width: 90%;;
+    height: 300px;
+    resize: none;
+    margin-bottom: 10px;
+    background: #252525;
+    color: #ffffff;
+    border: 1px solid #444;
+    border-radius: 4px;
+}
+
+/* ---------- Boutons ---------- */
+/* Boutons principaux et secondaires */
+.btn-primary, .btn-choice {
+    background: #4caf50;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background 0.3s ease;
+}
+
+.btn-primary:hover, .btn-choice:hover {
+    background: #45a049;
+}
+
+.btn-choice{
+    margin-top: 20px;
+}
+
+.btn-secondary {
+    background: #007bff;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background: #0069d9;
+}
+
+/* ---------- Zones de saisie ---------- */
+/* Style des champs input et textarea */
+input, select, textarea {
+    width: 100%;
+    background: #252525;
+    color: #ffffff;
+    border: 1px solid #444;
+    border-radius: 4px;
+    padding: 8px;
+    font-size: 14px;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #4caf50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.6);
+}
+
+/* Style des placeholders */
+textarea::placeholder {
+    color: #888;
+}
+
+/* ---------- Responsiveness ---------- */
+/* Ajustements pour les petits écrans */
+@media (max-width: 480px) {
+    .btn-primary, .btn-secondary {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+
+    #fullHistory {
+        height: 200px;
+    }
+}
+
+/* ---------- Barre de vie et lancer de dés ---------- */
+/* Indicateur de santé */
+.player-stats, .info-game {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.health-bar {
+    background: #444;
+    border: 1px solid #666;
+    border-radius: 4px;
+    width: 100%;
+    height: 20px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.health-fill {
+    background: #4caf50;
+    height: 100%;
+    transition: width 0.3s ease-in-out;
+}
+
+/* Résultat des dés */
+#diceResult {
+    font-weight: bold;
+    margin-left: 10px;
+    color: #4caf50;
+}
