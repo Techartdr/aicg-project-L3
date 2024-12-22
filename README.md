@@ -9,13 +9,13 @@ Welcome to **RPG AI**, an interactive role-playing game platform where artificia
 
 ## 🧩 **Features**
 
-1. **Custom Initial Prompt**: Describe the context and objectives of your adventure (e.g., *I am a knight searching for treasure in a haunted forest*).
-2. **Dynamic Story Generation**: The AI continues the story based on your choices.
-3. **Interactive Choices**: Each scene offers 3 options that influence the course of your adventure.
-4. **Full History Log**: Track and save the entirety of your adventure.
-5. **Customizable Configuration**:
+1. **Customizable Configuration**:
    - Available AI models (e.g., Llama 3.1 8B).
    - Maximum number of rounds.
+2. **Custom Initial Prompt**: Describe the context and objectives of your adventure (e.g., *I am a knight searching for treasure in a haunted forest*).
+3. **Dynamic Story Generation**: The AI continues the story based on your choices.
+4. **Interactive Choices**: Each scene offers 3 options that influence the course of your adventure.
+5. **Full History Log**: Track and save the entirety of your adventure.
 6. **Player Health Bar**: Implemented but not used in this version.
 7. **Dice Rolling**: Add an element of randomness to your adventure.
 
