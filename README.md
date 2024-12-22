@@ -3,7 +3,7 @@
 
 Welcome to **RPG AI**, an interactive role-playing game platform where artificial intelligence generates captivating scenarios based on your choices and imagination. This project is designed to provide immersion in a personalized and dynamic adventure.
 
-![Image du jeu](...)
+![Image du jeu](img/rpg_ai.png)
 
 ---
 
